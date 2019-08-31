@@ -87,17 +87,18 @@
 <meta property="og:site_name" content="Record">
 <meta property="og:description" content="概述DTW可以计算两个时间序列的相似度，尤其适用于不同长度、不同节奏的时间序列 解释Dynamic Time Warping（DTW）诞生有一定的历史了（日本学者Itakura提出），它出现的目的也比较单纯，是一种衡量两个长度不同的时间序列的相似度的方法。应用也比较广，主要是在模板匹配中，比如说用在孤立词语音识别（识别两段语音是否表示同一个单词），手势识别，数据挖掘和信息检索等中。 1、DTW将自">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/08/31/DTW动态时间规整/images/DTW_2.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/08/31/DTW动态时间规整/images/DTW_3.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/08/31/DTW动态时间规整/images/DTW_4.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/08/31/DTW动态时间规整/images/DTW_5.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/08/31/DTW动态时间规整/images/DTW_6.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/08/31/DTW动态时间规整/images/DTW_7.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/08/31/DTW动态时间规整/images/DTW_8.jpg">
-<meta property="og:updated_time" content="2019-08-31T06:08:03.299Z">
+<meta property="og:updated_time" content="2019-08-31T06:11:07.348Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DTW动态时间规整">
 <meta name="twitter:description" content="概述DTW可以计算两个时间序列的相似度，尤其适用于不同长度、不同节奏的时间序列 解释Dynamic Time Warping（DTW）诞生有一定的历史了（日本学者Itakura提出），它出现的目的也比较单纯，是一种衡量两个长度不同的时间序列的相似度的方法。应用也比较广，主要是在模板匹配中，比如说用在孤立词语音识别（识别两段语音是否表示同一个单词），手势识别，数据挖掘和信息检索等中。 1、DTW将自">
-<meta name="twitter:image" content="http://yoursite.com/2019/08/31/DTW动态时间规整/images/DTW_3.jpg">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/31/DTW动态时间规整/images/DTW_2.jpg">
 
 
 
@@ -376,8 +377,7 @@
 <p>1、DTW将自动warping扭曲时间序列（即在时间轴上进行局部的缩放），使得两个序列的形态尽可能的一致，得到最大可能的相似度。<br>2、DTW采用了动态规划DP（dynamic programming）的方法来进行时间规整的计算，可以说，动态规划方法在时间规整问题上的应用就是DTW。</p>
 <h2 id="feature-to-feature"><a href="#feature-to-feature" class="headerlink" title="feature to feature"></a>feature to feature</h2><p>在时间序列中，需要比较相似性的两段时间序列的长度可能并不相等，在语音识别领域表现为不同人的语速不同。因为语音信号具有相当大的随机性，即使同一个人在不同时刻发同一个音，也不可能具有完全的时间长度。而且同一个单词内的不同音素的发音速度也不同，比如有的人会把“A”这个音拖得很长，或者把“i”发的很短。在这些复杂情况下，使用传统的欧几里得距离无法有效地求的两个时间序列之间的距离（或者相似性）。</p>
 <p><div align="center">
-![DTW_2](images/DTW_2.jpg)
-</div><br>例如图A所示，实线和虚线分别是同一个词“pen”的两个语音波形（在y轴上拉开了，以便观察）。可以看到他们整体上的波形形状很相似，但在时间轴上却是不对齐的。例如在第20个时间点的时候，实线波形的a点会对应于虚线波形的b’点，这样传统的通过比较距离来计算相似性很明显不靠谱。因为很明显，实线的a点对应虚线的b点才是正确的。而在图B中，DTW就可以通过找到这两个波形对齐的点，这样计算它们的距离才是正确的。<br><img src="images/DTW_3.jpg" alt="DTW_3"><br>例如图A所示，实线和虚线分别是同一个词“pen”的两个语音波形（在y轴上拉开了，以便观察）。可以看到他们整体上的波形形状很相似，但在时间轴上却是不对齐的。例如在第20个时间点的时候，实线波形的a点会对应于虚线波形的b’点，这样传统的通过比较距离来计算相似性很明显不靠谱。因为很明显，实线的a点对应虚线的b点才是正确的。而在图B中，DTW就可以通过找到这两个波形对齐的点，这样计算它们的距离才是正确的。</p>
+</div><br><img src="images/DTW_2.jpg" alt="DTW_2"><br>例如图A所示，实线和虚线分别是同一个词“pen”的两个语音波形（在y轴上拉开了，以便观察）。可以看到他们整体上的波形形状很相似，但在时间轴上却是不对齐的。例如在第20个时间点的时候，实线波形的a点会对应于虚线波形的b’点，这样传统的通过比较距离来计算相似性很明显不靠谱。因为很明显，实线的a点对应虚线的b点才是正确的。而在图B中，DTW就可以通过找到这两个波形对齐的点，这样计算它们的距离才是正确的。<br><img src="images/DTW_3.jpg" alt="DTW_3"><br>例如图A所示，实线和虚线分别是同一个词“pen”的两个语音波形（在y轴上拉开了，以便观察）。可以看到他们整体上的波形形状很相似，但在时间轴上却是不对齐的。例如在第20个时间点的时候，实线波形的a点会对应于虚线波形的b’点，这样传统的通过比较距离来计算相似性很明显不靠谱。因为很明显，实线的a点对应虚线的b点才是正确的。而在图B中，DTW就可以通过找到这两个波形对齐的点，这样计算它们的距离才是正确的。</p>
 <p>那如果才知道两个波形是对齐了呢？也就是说怎么样的warping才是正确的？直观上理解，当然是warping一个序列后可以与另一个序列重合recover。这个时候两个序列中所有对应点的距离之和是最小的。所以从直观上理解，warping的正确性一般指“feature to feature”的对齐。</p>
 <h1 id="动态时间规整DTW"><a href="#动态时间规整DTW" class="headerlink" title="动态时间规整DTW"></a>动态时间规整DTW</h1><h2 id="线性缩放"><a href="#线性缩放" class="headerlink" title="线性缩放"></a>线性缩放</h2><p>动态时间规整DTW是一个典型的优化问题，它用满足一定条件的的时间规整函数W(n)描述测试模板和参考模板的时间对应关系，求解两模板匹配时累计距离最小所对应的规整函数。</p>
 <p>假设我们有两个时间序列Q和C，他们的长度分别是n和m：（实际语音匹配运用中，一个序列为参考模板，一个序列为测试模板，序列中的每个点的值为语音序列中每一帧的特征值。例如语音序列Q共有n帧，第i帧的特征值（一个数或者一个向量）是qi。至于取什么特征，在这里不影响DTW的讨论。我们需要的是匹配这两个语音序列的相似性，以达到识别我们的测试语音是哪个词）</p>
