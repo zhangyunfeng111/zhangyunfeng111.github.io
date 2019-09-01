@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="聚类,">
 
 
 
@@ -79,16 +79,23 @@
 
 
 
-<meta name="description" content="Let the past rest">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Record">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="简单介绍1、聚类的概念聚类就是按照某个特定标准(如距离准则)把一个数据集分割成不同的类或簇，使得同一个簇内的数据对象的相似性尽可能大，同时不在同一个簇中的数据对象的差异性也尽可能地大。即聚类后同一类的数据尽可能聚集到一起，不同数据尽量分离。 2、聚类和分类的区别 Clustering (聚类)，简单地说就是把相似的东西分到一组，聚类的时候，我们并不关心某一类是什么，我们需要实现的目标只是把相似的东">
+<meta name="keywords" content="聚类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="聚类算法">
+<meta property="og:url" content="http://yoursite.com/2019/09/01/聚类算法概述/index.html">
 <meta property="og:site_name" content="Record">
-<meta property="og:description" content="Let the past rest">
+<meta property="og:description" content="简单介绍1、聚类的概念聚类就是按照某个特定标准(如距离准则)把一个数据集分割成不同的类或簇，使得同一个簇内的数据对象的相似性尽可能大，同时不在同一个簇中的数据对象的差异性也尽可能地大。即聚类后同一类的数据尽可能聚集到一起，不同数据尽量分离。 2、聚类和分类的区别 Clustering (聚类)，简单地说就是把相似的东西分到一组，聚类的时候，我们并不关心某一类是什么，我们需要实现的目标只是把相似的东">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/09/01/聚类算法概述/images/kmeans.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/09/01/聚类算法概述/images/DBSCAN.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/09/01/聚类算法概述/images/grid.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/09/01/聚类算法概述/images/GMM.jpg">
+<meta property="og:updated_time" content="2019-09-01T14:30:54.834Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Record">
-<meta name="twitter:description" content="Let the past rest">
+<meta name="twitter:title" content="聚类算法">
+<meta name="twitter:description" content="简单介绍1、聚类的概念聚类就是按照某个特定标准(如距离准则)把一个数据集分割成不同的类或簇，使得同一个簇内的数据对象的相似性尽可能大，同时不在同一个簇中的数据对象的差异性也尽可能地大。即聚类后同一类的数据尽可能聚集到一起，不同数据尽量分离。 2、聚类和分类的区别 Clustering (聚类)，简单地说就是把相似的东西分到一组，聚类的时候，我们并不关心某一类是什么，我们需要实现的目标只是把相似的东">
+<meta name="twitter:image" content="http://yoursite.com/2019/09/01/聚类算法概述/images/kmeans.jpg">
 
 
 
@@ -118,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/01/聚类算法概述/">
 
 
 
 
 
-  <title>Record</title>
+  <title>聚类算法 | Record</title>
   
 
 
@@ -143,8 +150,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -259,9 +265,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -291,9 +297,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/zhangyunfeng111.github.io/2019/09/01/聚类算法概述/" itemprop="url">聚类算法</a></h1>
+          <h1 class="post-title" itemprop="name headline">聚类算法</h1>
         
 
         <div class="post-meta">
@@ -365,9 +369,7 @@
       
 
       
-        
-          
-            <h1 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h1><h2 id="1、聚类的概念"><a href="#1、聚类的概念" class="headerlink" title="1、聚类的概念"></a>1、聚类的概念</h2><p>聚类就是按照某个特定标准(如距离准则)把一个数据集分割成不同的类或簇，使得同一个簇内的数据对象的相似性尽可能大，同时不在同一个簇中的数据对象的差异性也尽可能地大。即聚类后同一类的数据尽可能聚集到一起，不同数据尽量分离。</p>
+        <h1 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h1><h2 id="1、聚类的概念"><a href="#1、聚类的概念" class="headerlink" title="1、聚类的概念"></a>1、聚类的概念</h2><p>聚类就是按照某个特定标准(如距离准则)把一个数据集分割成不同的类或簇，使得同一个簇内的数据对象的相似性尽可能大，同时不在同一个簇中的数据对象的差异性也尽可能地大。即聚类后同一类的数据尽可能聚集到一起，不同数据尽量分离。</p>
 <h2 id="2、聚类和分类的区别"><a href="#2、聚类和分类的区别" class="headerlink" title="2、聚类和分类的区别"></a>2、聚类和分类的区别</h2><ul>
 <li>Clustering (聚类)，简单地说就是把相似的东西分到一组，聚类的时候，我们并不关心某一类是什么，我们需要实现的目标只是把相似的东西聚到一起。因此，一个聚类算法通常只需要知道如何计算相似度就可以开始工作了，因此 clustering 通常并不需要使用训练数据进行学习，这在Machine Learning中被称unsupervised learning (无监督学习)。 </li>
 <li>Classification (分类)，对于一个classifier，通常需要你告诉它“这个东西被分为某某类”这样一些例子，理想情况下，一个 classifier 会从它得到的训练集中进行“学习”，从而具备对未知数据进行分类的能力，这种提供训练数据的过程通常叫做supervised learning (监督学习)。</li>
@@ -455,8 +457,6 @@
 <h2 id="2、相似性衡量"><a href="#2、相似性衡量" class="headerlink" title="2、相似性衡量"></a>2、相似性衡量</h2><p>前面提到聚类其实就是比较相似性的。（其实，本部分可能放到前面第一部分会好些。）<br>相似性衡量又可以细分为直接法和间接法（答主自己取的名字，求轻拍）：直接法是直接求取input data的相似性，间接法是求取data中提取出的features的相似性。但无论是求data还是feature的相似性，方法都是这么几种：<br>（1）距离。距离主要就是指Minkovski距离。这个名字虽然听起来陌生，但其算法就是Lp norm的算法，如果是L1 norm，那就是绝对值/曼哈顿距离（Manhattan distance）；如果是L2 norm，那就是著名的欧式距离（Euclidean distance）了，也是应用最广泛的；如果L无穷范式，supremum距离，好像也有叫切比雪夫距离的，但就很少有人用了。另外，还有Mahalanobis距离，目前来看主要应用于Gaussian Mixture Model（GMM），还有Lance&amp;Williams距离等等，但几乎没见过求距离的时候会专门用这个的。<br>（2）相似系数。主要有夹角余弦和相关系数。相关系数的应用也非常广泛，其主要优势是它不受原线性变换的影响，而且可以轻松地转换为距离，但其运算速度要比距离法慢得多，当维数很高的时候。<br>（3）核函数K(x,y)。定义在RdXRdRdXRd上的二元函数，本质上也是反映x和y的距离。核函数的功能就是把数据从低维空间投影（project）到高维空间去。<br>(4)DTW（dynamic time warping）。这是一种非常特殊的距离算法，它可以计算两个不同长度的向量的距离，也可以对两对向量中不同时间段内的数据做匹配。DTW主要用在时间序列的部分场合里。</p>
 <h2 id="四、参考资料"><a href="#四、参考资料" class="headerlink" title="四、参考资料"></a>四、参考资料</h2><p>知乎<br><a href="https://www.zhihu.com/question/34554321" target="_blank" rel="noopener">https://www.zhihu.com/question/34554321</a><br>四种聚类方法比较<br><a href="http://blog.csdn.net/zhoubl668/article/details/7881313" target="_blank" rel="noopener">http://blog.csdn.net/zhoubl668/article/details/7881313</a><br>基于网格的聚类算法<a href="https://www.qcloud.com/community/article/539270" target="_blank" rel="noopener">https://www.qcloud.com/community/article/539270</a><br>FCM聚类算法<br><a href="http://blog.csdn.net/sin_geek/article/details/22896197" target="_blank" rel="noopener">http://blog.csdn.net/sin_geek/article/details/22896197</a><br><a href="https://www.cnblogs.com/sddai/p/6259553.html" target="_blank" rel="noopener">https://www.cnblogs.com/sddai/p/6259553.html</a></p>
 
-          
-        
       
     </div>
     
@@ -471,616 +471,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/zhangyunfeng111.github.io/2019/08/31/DTW动态时间规整/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张云烽">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/zhangyunfeng111.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Record">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/zhangyunfeng111.github.io/2019/08/31/DTW动态时间规整/" itemprop="url">DTW动态时间规整</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-31T12:57:47+08:00">
-                2019-08-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/zhangyunfeng111.github.io/categories/机器学习/" itemprop="url" rel="index">
-                    <span itemprop="name">机器学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/zhangyunfeng111.github.io/tags/聚类/" rel="tag"># 聚类</a>
           
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>DTW可以计算<strong>两个时间序列的相似度</strong>，尤其适用于不同长度、不同节奏的时间序列</p>
-<h2 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h2><p>Dynamic Time Warping（DTW）诞生有一定的历史了（日本学者Itakura提出），它出现的目的也比较单纯，是一种衡量两个长度不同的时间序列的相似度的方法。应用也比较广，主要是在模板匹配中，比如说用在孤立词语音识别（识别两段语音是否表示同一个单词），手势识别，数据挖掘和信息检索等中。</p>
-<p>1、DTW将自动warping扭曲时间序列（即在时间轴上进行局部的缩放），使得两个序列的形态尽可能的一致，得到最大可能的相似度。<br>2、DTW采用了动态规划DP（dynamic programming）的方法来进行时间规整的计算，可以说，动态规划方法在时间规整问题上的应用就是DTW。</p>
-<h2 id="feature-to-feature"><a href="#feature-to-feature" class="headerlink" title="feature to feature"></a>feature to feature</h2><p>在时间序列中，需要比较相似性的两段时间序列的长度可能并不相等，在语音识别领域表现为不同人的语速不同。因为语音信号具有相当大的随机性，即使同一个人在不同时刻发同一个音，也不可能具有完全的时间长度。而且同一个单词内的不同音素的发音速度也不同，比如有的人会把“A”这个音拖得很长，或者把“i”发的很短。在这些复杂情况下，使用传统的欧几里得距离无法有效地求的两个时间序列之间的距离（或者相似性）。</p>
-<p><div align="center">
-</div><br><img src="images/DTW_2.jpg" alt="DTW_2"><br>例如图A所示，实线和虚线分别是同一个词“pen”的两个语音波形（在y轴上拉开了，以便观察）。可以看到他们整体上的波形形状很相似，但在时间轴上却是不对齐的。例如在第20个时间点的时候，实线波形的a点会对应于虚线波形的b’点，这样传统的通过比较距离来计算相似性很明显不靠谱。因为很明显，实线的a点对应虚线的b点才是正确的。而在图B中，DTW就可以通过找到这两个波形对齐的点，这样计算它们的距离才是正确的。<br><img src="images/DTW_3.jpg" alt="DTW_3"><br>例如图A所示，实线和虚线分别是同一个词“pen”的两个语音波形（在y轴上拉开了，以便观察）。可以看到他们整体上的波形形状很相似，但在时间轴上却是不对齐的。例如在第20个时间点的时候，实线波形的a点会对应于虚线波形的b’点，这样传统的通过比较距离来计算相似性很明显不靠谱。因为很明显，实线的a点对应虚线的b点才是正确的。而在图B中，DTW就可以通过找到这两个波形对齐的点，这样计算它们的距离才是正确的。</p>
-<p>那如果才知道两个波形是对齐了呢？也就是说怎么样的warping才是正确的？直观上理解，当然是warping一个序列后可以与另一个序列重合recover。这个时候两个序列中所有对应点的距离之和是最小的。所以从直观上理解，warping的正确性一般指“feature to feature”的对齐。</p>
-<h1 id="动态时间规整DTW"><a href="#动态时间规整DTW" class="headerlink" title="动态时间规整DTW"></a>动态时间规整DTW</h1><h2 id="线性缩放"><a href="#线性缩放" class="headerlink" title="线性缩放"></a>线性缩放</h2><p>动态时间规整DTW是一个典型的优化问题，它用满足一定条件的的时间规整函数W(n)描述测试模板和参考模板的时间对应关系，求解两模板匹配时累计距离最小所对应的规整函数。</p>
-<p>假设我们有两个时间序列Q和C，他们的长度分别是n和m：（实际语音匹配运用中，一个序列为参考模板，一个序列为测试模板，序列中的每个点的值为语音序列中每一帧的特征值。例如语音序列Q共有n帧，第i帧的特征值（一个数或者一个向量）是qi。至于取什么特征，在这里不影响DTW的讨论。我们需要的是匹配这两个语音序列的相似性，以达到识别我们的测试语音是哪个词）</p>
-<p>Q = q1,q2,…,qi,…, qn ;<br>C = c1,c2,…, cj,…, cm ;</p>
-<p>首先，我们依然采用两个序列中每一对“点”之间的距离来计算形似度，即使两个序列中的点的个数可能不一样。不过，因为可以warping规整时间轴，所以，我们并不是在两个序列中依次取一对点来计算距离，而是每个点有可能对应于另一个序列中的多个点。从上面图B可以看到这种一对多的情况。</p>
-<p>当然，这种warping有一定要求，每个点都必须用到，不可跳过，要按照原始的次序，点对不可交叉。即要满足下面描述的 边界条件、连续性、单调性。</p>
-<p>关于每一对点的距离计算，这个距离的算法并无规定，依赖于每个“点”的性质来选择，<strong>一个“点”可以是单个数值，也可以是一个多维向量。</strong>在简单的情况下，可以计算两个点的欧氏距离作为这一对点的距离。</p>
-<p>理论上可以穷举两个序列的所有可能的warping 形式，逐一计算两者距离，距离最小的就是所要求的warping，但这样计算量太大，所以采用动态规划的方法来高效的完成计算。</p>
-<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><p>我们需要将连个序列对齐。最简单的对齐方式就是线性缩放了。把短的序列线性放大到和长序列一样的长度再比较，或者把长的线性缩短到和短序列一样的长度再比较。但是这样的计算没有考虑到语音中各个段在不同情况下的持续时间会产生或长或短的变化，因此识别效果不可能最佳。因此更多的是采用动态规划（dynamic programming）的方法。</p>
-<p>为了对齐这两个序列，我们需要构造一个n x m的矩阵网格，矩阵元素(i, j)表示qi和cj两个点的距离d(qi, cj)（也就是序列Q的每一个点和C的每一个点之间的相似度，距离越小则相似度越高。这里先不管顺序），一般采用欧式距离，d(qi,<br>cj)= (qi-cj)2（也可以理解为失真度）。每一个矩阵元素(i, j)表示点qi和cj的对齐。DP算法可以归结为寻找一条通过此网格中若干格点的路径，路径通过的格点即为两个序列进行计算的对齐的点。<br><img src="images/DTW_4.jpg" alt="DTW_4"><br>那么这条路径我们怎么找到呢？那条路径才是最好的呢？也就是刚才那个问题，怎么样的warping才是最好的。</p>
-<p>我们把这条路径定义为warping path规整路径，并用W来表示， W的第k个元素定义为wk=(i,j)k，定义了序列Q和C的映射。这样我们有：<br><img src="images/DTW_5.jpg" alt="DTW_5"><br>首先，这条路径不是随意选择的，需要满足以下几个约束：</p>
-<p>1）边界条件：w1=(1,<br>1)和wK=(m, n)。任何一种语音的发音快慢都有可能变化，但是其各部分的先后次序不可能改变，因此所选的路径必定是从左下角出发，在右上角结束。</p>
-<p>2）连续性：如果wk-1=<br>(a’, b’)，那么对于路径的下一个点wk=(a, b)需要满足 (a-a’) &lt;=1和 (b-b’) &lt;=1。也就是不可能跨过某个点去匹配，只能和自己相邻的点对齐。这样可以保证Q和C中的每个坐标都在W中出现。</p>
-<p>3）单调性：如果wk-1=<br>(a’, b’)，那么对于路径的下一个点wk=(a, b)需要满足0&lt;=(a-a’)和0&lt;= (b-b’)。这限制W上面的点必须是随着时间单调进行的。以保证图B中的虚线不会相交。</p>
-<p>结合连续性和单调性约束，每一个格点的路径就只有三个方向了。例如如果路径已经通过了格点(i, j)，那么下一个通过的格点只可能是下列三种情况之一：(i+1, j)，(i, j+1)或者(i+1, j+1)。<br><img src="images/DTW_6.jpg" alt="DTW_6"><br>满足上面这些约束条件的路径可以有指数个，然后我们感兴趣的是使得下面的规整代价最小的路径：<br><img src="images/DTW_7.jpg" alt="DTW_7"><br>分母中的K主要是用来对不同的长度的规整路径做补偿。因为不同的路径其长短不同，较长的路径有较多的“点对”，会有较多的距离累加上去，所以总距离除以K得到单位路径的距离。</p>
-<p>我们的目的是什么？或者说DTW的思想是什么？是把两个时间序列进行延伸和缩短，来得到两个时间序列性距离最短也就是最相似的那一个warping，这个最短的距离也就是这两个时间序列的最后的距离度量。在这里，我们要做的就是选择一个路径，使得最后得到的总的距离最小。</p>
-<p>这里我们定义一个累加距离cumulative distances。从(0, 0)点开始匹配这两个序列Q和C，每到一个点，之前所有的点计算的距离都会累加。到达终点(n, m)后，这个累积距离就是我们上面说的最后的总的距离，也就是序列Q和C的相似度。</p>
-<p>累积距离γ(i,j)可以按下面的方式表示，累积距离γ(i,j)为当前格点距离d(i,j)，也就是<strong>点qi和cj的欧式距离（相似性）</strong>与可以到达该点的最小的邻近元素的<strong>累积距离</strong>之和：<br><img src="images/DTW_8.jpg" alt="DTW_8"><br>最佳路径是使得沿路径的积累距离达到最小值这条路径。这条路径可以通过动态规划（dynamic programming）算法得到。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/zhangyunfeng111.github.io/2019/08/18/pandas库使用说明/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张云烽">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/zhangyunfeng111.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Record">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/zhangyunfeng111.github.io/2019/08/18/pandas库使用说明/" itemprop="url">pandas库使用说明</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-18T15:08:49+08:00">
-                2019-08-18
-              </time>
+              <a href="/zhangyunfeng111.github.io/2019/08/31/DTW动态时间规整/" rel="next" title="DTW动态时间规整">
+                <i class="fa fa-chevron-left"></i> DTW动态时间规整
+              </a>
             
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/zhangyunfeng111.github.io/categories/机器学习/" itemprop="url" rel="index">
-                    <span itemprop="name">机器学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="pamdas使用说明"><a href="#pamdas使用说明" class="headerlink" title="pamdas使用说明"></a>pamdas使用说明</h1><h2 id="创建数据集"><a href="#创建数据集" class="headerlink" title="创建数据集"></a>创建数据集</h2><p><img src="images/pandas1.jpg" alt="pandas1"></p>
-<h2 id="查看数据"><a href="#查看数据" class="headerlink" title="查看数据"></a>查看数据</h2><p><img src="images/pandas2.jpg" alt="pandas2"></p>
-<h2 id="数据选择"><a href="#数据选择" class="headerlink" title="数据选择"></a>数据选择</h2><p><img src="images/pandas3.jpg" alt="pandas3"></p>
-<h2 id="读取和保存"><a href="#读取和保存" class="headerlink" title="读取和保存"></a>读取和保存</h2><p><img src="images/pandas4.jpg" alt="pandas4"></p>
-<h2 id="筛选数据"><a href="#筛选数据" class="headerlink" title="筛选数据"></a>筛选数据</h2><p><img src="images/pandas5.jpg" alt="pandas5"></p>
-<h2 id="增加与删除"><a href="#增加与删除" class="headerlink" title="增加与删除"></a>增加与删除</h2><p><img src="images/pandas6.jpg" alt="pandas6"></p>
-<h2 id="计数统计"><a href="#计数统计" class="headerlink" title="计数统计"></a>计数统计</h2><p><img src="images/pandas7.jpg" alt="pandas7"></p>
-<h2 id><a href="#" class="headerlink" title=" "></a> </h2><p><img src="images/pandas8.jpg" alt="pandas8"></p>
-<h2 id="缺失值处理"><a href="#缺失值处理" class="headerlink" title="缺失值处理"></a>缺失值处理</h2><p><img src="images/pandas9.jpg" alt="pandas9"></p>
-<h2 id="排序与合并"><a href="#排序与合并" class="headerlink" title="排序与合并"></a>排序与合并</h2><p><img src="images/pandas10.jpg" alt="pandas10"></p>
-<h2 id="可视化操作"><a href="#可视化操作" class="headerlink" title="可视化操作"></a>可视化操作</h2><p><img src="images/pandas11.jpg" alt="pandas11"></p>
-<h2 id="字符传操作"><a href="#字符传操作" class="headerlink" title="字符传操作"></a>字符传操作</h2><p><img src="images/pandas12.jpg" alt="pandas12"></p>
-<h2 id="广播"><a href="#广播" class="headerlink" title="广播"></a>广播</h2><p><img src="images/pandas13.jpg" alt="pandas13"></p>
-<h2 id="数据库操作"><a href="#数据库操作" class="headerlink" title="数据库操作"></a>数据库操作</h2><p><img src="images/pandas14.jpg" alt="pandas14"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/zhangyunfeng111.github.io/2019/08/14/markdown语法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="张云烽">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/zhangyunfeng111.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Record">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/zhangyunfeng111.github.io/2019/08/14/markdown语法/" itemprop="url">Markdown语法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-14T15:49:20+08:00">
-                2019-08-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/zhangyunfeng111.github.io/categories/markdown/" itemprop="url" rel="index">
-                    <span itemprop="name">markdown</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h1><h2 id="Markdown的设计哲学"><a href="#Markdown的设计哲学" class="headerlink" title="Markdown的设计哲学"></a>Markdown的设计哲学</h2><blockquote>
-<p>Markdown 的目標是實現「易讀易寫」。<br>不過最需要強調的便是它的可讀性。一份使用 Markdown 格式撰寫的文件應該可以直接以純文字發佈，並且看起來不會像是由許多標籤或是格式指令所構成。<br>Markdown 的語法有個主要的目的：用來作為一種網路內容的<em>寫作</em>用語言。</p>
-</blockquote>
-<h2 id="本文约定"><a href="#本文约定" class="headerlink" title="本文约定"></a>本文约定</h2><p>如果有写 <code>效果如下：</code>， 在 MWeb 编辑状态下只有用 <code>CMD + 4</code> 或 <code>CMD + R</code> 预览才可以看效果。</p>
-<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>Markdown 语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 第一级标题 `&lt;h1&gt;` </span><br><span class="line">## 第二级标题 `&lt;h2&gt;` </span><br><span class="line">###### 第六级标题 `&lt;h6&gt;`</span><br></pre></td></tr></table></figure>
-<p>效果如下：</p>
-<h1 id="第一级标题-lt-h1-gt"><a href="#第一级标题-lt-h1-gt" class="headerlink" title="第一级标题 &lt;h1&gt;"></a>第一级标题 <code>&lt;h1&gt;</code></h1><h2 id="第二级标题-lt-h2-gt"><a href="#第二级标题-lt-h2-gt" class="headerlink" title="第二级标题 &lt;h2&gt;"></a>第二级标题 <code>&lt;h2&gt;</code></h2><h6 id="第六级标题-lt-h6-gt"><a href="#第六级标题-lt-h6-gt" class="headerlink" title="第六级标题 &lt;h6&gt;"></a>第六级标题 <code>&lt;h6&gt;</code></h6><h2 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h2><p>Markdown 语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*这些文字会生成`&lt;em&gt;`*</span><br><span class="line">_这些文字会生成`&lt;u&gt;`_</span><br><span class="line"></span><br><span class="line">**这些文字会生成`&lt;strong&gt;`**</span><br><span class="line">__这些文字会生成`&lt;strong&gt;`__</span><br></pre></td></tr></table></figure>
-<p>在 MWeb 中的快捷键为： <code>CMD + U</code>、<code>CMD + I</code>、<code>CMD + B</code><br>效果如下：</p>
-<p><em>这些文字会生成<code>&lt;em&gt;</code></em><br>_这些文字会生成<code>&lt;u&gt;</code>_</p>
-<p><strong>这些文字会生成<code>&lt;strong&gt;</code></strong><br><strong>这些文字会生成<code>&lt;strong&gt;</code></strong></p>
-<h2 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h2><p>四个及以上空格加回车。<br>如果不想打这么多空格，只要回车就为换行，请勾选：<code>Preferences</code> - <code>Themes</code> - <code>Translate newlines to &lt;br&gt; tags</code></p>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>Markdown 语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 项目一 无序列表 `* + 空格键`</span><br><span class="line">* 项目二</span><br><span class="line">	* 项目二的子项目一 无序列表 `TAB + * + 空格键`</span><br><span class="line">	* 项目二的子项目二</span><br></pre></td></tr></table></figure>
-<p>在 MWeb 中的快捷键为： <code>Option + U</code><br>效果如下：</p>
-<ul>
-<li>项目一 无序列表 <code>* + 空格键</code></li>
-<li>项目二<ul>
-<li>项目二的子项目一 无序列表 <code>TAB + * + 空格键</code></li>
-<li>项目二的子项目二</li>
-</ul>
-</li>
-</ul>
-<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>Markdown 语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 项目一 有序列表 `数字 + . + 空格键`</span><br><span class="line">2. 项目二 </span><br><span class="line">3. 项目三</span><br><span class="line">	1. 项目三的子项目一 有序列表 `TAB + 数字 + . + 空格键`</span><br><span class="line">	2. 项目三的子项目二</span><br></pre></td></tr></table></figure>
-<p>效果如下：</p>
-<ol>
-<li>项目一 有序列表 <code>数字 + . + 空格键</code></li>
-<li>项目二 </li>
-<li>项目三<ol>
-<li>项目三的子项目一 有序列表 <code>TAB + 数字 + . + 空格键</code></li>
-<li>项目三的子项目二</li>
-</ol>
-</li>
-</ol>
-<h3 id="列表中嵌入代码块语法"><a href="#列表中嵌入代码块语法" class="headerlink" title="列表中嵌入代码块语法"></a>列表中嵌入代码块语法</h3><pre><code>1. 项目一 有序列表 `数字 + . + 空格键`
-
-    列表中嵌入代码块必须前后空一行，如这个写法
-
-    <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fancyAlert</span>(<span class="params">arg</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(arg) &#123;</span><br><span class="line">    $.facebox(&#123;<span class="attr">div</span>:<span class="string">'#foo'</span>&#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-    其他文本。
-
-2. 项目二
-</code></pre><h3 id="任务列表（Task-lists）"><a href="#任务列表（Task-lists）" class="headerlink" title="任务列表（Task lists）"></a>任务列表（Task lists）</h3><p>Markdown 语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- [ ] 任务一 未做任务 `- + 空格 + [ ]`</span><br><span class="line">- [x] 任务二 已做任务 `- + 空格 + [x]`</span><br></pre></td></tr></table></figure>
-<p>效果如下：</p>
-<ul>
-<li>[ ] 任务一 未做任务 <code>- + 空格 + [ ]</code></li>
-<li>[x] 任务二 已做任务 <code>- + 空格 + [x]</code></li>
-</ul>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>Markdown 语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![GitHub set up](http://zh.mweb.im/asset/img/set-up-git.gif)</span><br><span class="line">格式: ![Alt Text](url)</span><br></pre></td></tr></table></figure>
-<p><code>Control + Shift + I</code> 可插入Markdown语法。<br>如果是 MWeb 的文档库中的文档，还可以用拖放图片、<code>CMD + V</code> 粘贴、<code>CMD + Option + I</code> 导入这三种方式来增加图片。<br>效果如下：</p>
-<p><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="GitHub set up"></p>
-<p>MWeb 引入的特别的语法来设置图片宽度，方法是在图片描述后加 <code>-w + 图片宽度</code> 即可，比如说要设置上面的图片的宽度为 140，语法如为 <code>![GitHub-w140](set-up-git.gif)</code>：</p>
-<p><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="GitHub set up-w140"></p>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>Markdown 语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">email &lt;example@example.com&gt;</span><br><span class="line">[GitHub](http://github.com)</span><br><span class="line">自动生成连接  &lt;http://www.github.com/&gt;</span><br></pre></td></tr></table></figure>
-<p><code>Control + Shift + L</code> 可插入Markdown语法。<br>如果是 MWeb 的文档库中的文档，拖放或<code>CMD + Option + I</code> 导入非图片时，会生成连接。<br>效果如下：</p>
-<p>Email 连接： <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#101;&#x78;&#97;&#x6d;&#112;&#x6c;&#x65;&#x40;&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#111;&#109;">&#101;&#x78;&#97;&#x6d;&#112;&#x6c;&#x65;&#x40;&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#111;&#109;</a><br><a href="http://github.com" target="_blank" rel="noopener">连接标题Github网站</a><br>自动生成连接像： <a href="http://www.github.com/" target="_blank" rel="noopener">http://www.github.com/</a> 这样</p>
-<h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><p>Markdown 语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">某某说:</span><br><span class="line">&gt; 第一行引用</span><br><span class="line">&gt; 第二行费用文字</span><br></pre></td></tr></table></figure>
-<p><code>CMD + Shift + B</code> 可插入Markdown语法。<br>效果如下：</p>
-<p>某某说:</p>
-<blockquote>
-<p>第一行引用<br>第二行费用文字</p>
-</blockquote>
-<h2 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h2><p>Markdown 语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">像这样即可：`&lt;addr&gt;` `code`</span><br></pre></td></tr></table></figure>
-<p><code>CMD + K</code> 可插入Markdown语法。<br>效果如下：</p>
-<p>像这样即可：<code>&lt;addr&gt;</code> <code>code</code></p>
-<h2 id="多行或者一段代码"><a href="#多行或者一段代码" class="headerlink" title="多行或者一段代码"></a>多行或者一段代码</h2><p>Markdown 语法：</p>
-<pre><code><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fancyAlert</span>(<span class="params">arg</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(arg) &#123;</span><br><span class="line">    $.facebox(&#123;<span class="attr">div</span>:<span class="string">'#foo'</span>&#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</code></pre><p><code>CMD + Shift + K</code> 可插入Markdown语法。<br>效果如下：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fancyAlert</span>(<span class="params">arg</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(arg) &#123;</span><br><span class="line">		$.facebox(&#123;<span class="attr">div</span>:<span class="string">'#foo'</span>&#125;)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="顺序图或流程图"><a href="#顺序图或流程图" class="headerlink" title="顺序图或流程图"></a>顺序图或流程图</h2><p>Markdown 语法：</p>
-<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">张三-&gt;李四: 嘿，小四儿, 写博客了没?</span><br><span class="line">Note right of 李四: 李四愣了一下，说：</span><br><span class="line">李四--&gt;张三: 忙得吐血，哪有时间写。</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: 开始</span><br><span class="line">e=&gt;end: 结束</span><br><span class="line">op=&gt;operation: 我的操作</span><br><span class="line">cond=&gt;condition: 确认？</span><br><span class="line"></span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br></pre></td></tr></table></figure>
-</code></pre><p>效果如下（ <code>Preferences</code> - <code>Themes</code> - <code>Enable sequence &amp; flow chart</code> 才会看到效果 ）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">张三-&gt;李四: 嘿，小四儿, 写博客了没?</span><br><span class="line">Note right of 李四: 李四愣了一下，说：</span><br><span class="line">李四--&gt;张三: 忙得吐血，哪有时间写。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: 开始</span><br><span class="line">e=&gt;end: 结束</span><br><span class="line">op=&gt;operation: 我的操作</span><br><span class="line">cond=&gt;condition: 确认？</span><br><span class="line"></span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br></pre></td></tr></table></figure>
-<p>更多请参考：<a href="http://bramp.github.io/js-sequence-diagrams/" target="_blank" rel="noopener">http://bramp.github.io/js-sequence-diagrams/</a>, <a href="http://adrai.github.io/flowchart.js/" target="_blank" rel="noopener">http://adrai.github.io/flowchart.js/</a></p>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>Markdown 语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">第一格表头 | 第二格表头</span><br><span class="line">--------- | -------------</span><br><span class="line">内容单元格 第一列第一格 | 内容单元格第二列第一格</span><br><span class="line">内容单元格 第一列第二格 多加文字 | 内容单元格第二列第二格</span><br></pre></td></tr></table></figure>
-<p>效果如下：</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>第一格表头</th>
-<th>第二格表头</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>内容单元格 第一列第一格</td>
-<td>内容单元格第二列第一格</td>
-</tr>
-<tr>
-<td>内容单元格 第一列第二格 多加文字</td>
-<td>内容单元格第二列第二格</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>Markdown 语法：</p>
-<pre><code>加删除线像这样用： ~~删除这些~~
-</code></pre><p>效果如下：</p>
-<p>加删除线像这样用： <del>删除这些</del></p>
-<h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2><p>以下三种方式都可以生成分隔线：</p>
-<pre><code>***
-
-*****
-
-- - -
-</code></pre><p>效果如下：</p>
-<hr>
-<hr>
-<hr>
-<h2 id="MathJax"><a href="#MathJax" class="headerlink" title="MathJax"></a>MathJax</h2><p>Markdown 语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">块级公式：</span><br><span class="line">$$	x = \dfrac&#123;-b \pm \sqrt&#123;b^2 - 4ac&#125;&#125;&#123;2a&#125; $$</span><br><span class="line"></span><br><span class="line">\\[ \frac&#123;1&#125;&#123;\Bigl(\sqrt&#123;\phi \sqrt&#123;5&#125;&#125;-\phi\Bigr) e^&#123;\frac25 \pi&#125;&#125; =</span><br><span class="line">1+\frac&#123;e^&#123;-2\pi&#125;&#125; &#123;1+\frac&#123;e^&#123;-4\pi&#125;&#125; &#123;1+\frac&#123;e^&#123;-6\pi&#125;&#125;</span><br><span class="line">&#123;1+\frac&#123;e^&#123;-8\pi&#125;&#125; &#123;1+\ldots&#125; &#125; &#125; &#125; \\]</span><br><span class="line"></span><br><span class="line">行内公式： $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$</span><br></pre></td></tr></table></figure>
-<p>效果如下（<code>Preferences</code> - <code>Themes</code> - <code>Enable MathJax</code> 才会看到效果）：</p>
-<p>块级公式：</p>
-<script type="math/tex; mode=display">x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}</script><p>\[ \frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} =<br>1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}}<br>{1+\frac{e^{-8\pi}} {1+\ldots} } } } \]</p>
-<p>行内公式： $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$</p>
-<h2 id="脚注（Footnote）"><a href="#脚注（Footnote）" class="headerlink" title="脚注（Footnote）"></a>脚注（Footnote）</h2><p>Markdown 语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一个脚注：[^sample_footnote]</span><br></pre></td></tr></table></figure>
-<p>效果如下：</p>
-<p>这是一个脚注：<sup><a href="#fn_sample_footnote" id="reffn_sample_footnote">sample_footnote</a></sup></p>
-<blockquote id="fn_sample_footnote">
-<sup>sample_footnote</sup>. 这里是脚注信息<a href="#reffn_sample_footnote" title="Jump back to footnote [sample_footnote] in the text."> &#8617;</a>
-</blockquote>
-<h2 id="注释和阅读更多"><a href="#注释和阅读更多" class="headerlink" title="注释和阅读更多"></a>注释和阅读更多</h2><!-- comment -->
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/zhangyunfeng111.github.io/2019/08/14/markdown语法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -1090,10 +510,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -1101,6 +522,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -1121,8 +546,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1182,6 +616,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简单介绍"><span class="nav-number">1.</span> <span class="nav-text">简单介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、聚类的概念"><span class="nav-number">1.1.</span> <span class="nav-text">1、聚类的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、聚类和分类的区别"><span class="nav-number">1.2.</span> <span class="nav-text">2、聚类和分类的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、衡量聚类算法优劣的标准"><span class="nav-number">1.3.</span> <span class="nav-text">3、衡量聚类算法优劣的标准</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、聚类算法有哪些？"><span class="nav-number">1.4.</span> <span class="nav-text">4、聚类算法有哪些？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#算法介绍"><span class="nav-number">2.</span> <span class="nav-text">算法介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-基于层次的方法（Hierarchical-methods）"><span class="nav-number">2.1.</span> <span class="nav-text">1. 基于层次的方法（Hierarchical methods）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本思想"><span class="nav-number">2.1.1.</span> <span class="nav-text">基本思想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法流程"><span class="nav-number">2.1.2.</span> <span class="nav-text">算法流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法优缺点"><span class="nav-number">2.1.3.</span> <span class="nav-text">算法优缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的算法及改进"><span class="nav-number">2.1.4.</span> <span class="nav-text">常见的算法及改进</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、基于划分的方法（Partition-based-methods）"><span class="nav-number">2.2.</span> <span class="nav-text">2、基于划分的方法（Partition-based methods）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1基本思想"><span class="nav-number">2.2.1.</span> <span class="nav-text">2.1基本思想</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2算法流程"><span class="nav-number">2.3.</span> <span class="nav-text">2.2算法流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3算法优缺点"><span class="nav-number">2.4.</span> <span class="nav-text">2.3算法优缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4常见的算法及改进"><span class="nav-number">2.5.</span> <span class="nav-text">2.4常见的算法及改进</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、基于密度的方法-Density-based-methods"><span class="nav-number">2.6.</span> <span class="nav-text">3、基于密度的方法(Density-based methods)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1基本思想"><span class="nav-number">2.6.1.</span> <span class="nav-text">3.1基本思想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2算法流程"><span class="nav-number">2.6.2.</span> <span class="nav-text">3.2算法流程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DBSCAN聚类算法原理的基本要点"><span class="nav-number">2.6.2.1.</span> <span class="nav-text">DBSCAN聚类算法原理的基本要点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3算法优缺点"><span class="nav-number">2.6.3.</span> <span class="nav-text">3.3算法优缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4常见的算法及改进"><span class="nav-number">2.6.4.</span> <span class="nav-text">3.4常见的算法及改进</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、基于网络的方法（Grid-based-methods）"><span class="nav-number">2.7.</span> <span class="nav-text">4、基于网络的方法（Grid-based methods）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1基本思想"><span class="nav-number">2.7.1.</span> <span class="nav-text">4.1基本思想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2算法流程"><span class="nav-number">2.7.2.</span> <span class="nav-text">4.2算法流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3算法优缺点"><span class="nav-number">2.7.3.</span> <span class="nav-text">4.3算法优缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4常见的算法及改进"><span class="nav-number">2.7.4.</span> <span class="nav-text">4.4常见的算法及改进</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、基于模型的方法（Model-based-methods）"><span class="nav-number">2.8.</span> <span class="nav-text">5、基于模型的方法（Model-based methods）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1基本思想"><span class="nav-number">2.8.1.</span> <span class="nav-text">5.1基本思想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2算法流程"><span class="nav-number">2.8.2.</span> <span class="nav-text">5.2算法流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3算法优缺点"><span class="nav-number">2.8.3.</span> <span class="nav-text">5.3算法优缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4常见的算法及改进"><span class="nav-number">2.8.4.</span> <span class="nav-text">5.4常见的算法及改进</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、基于模糊的聚类（FCM模糊聚类）"><span class="nav-number">2.9.</span> <span class="nav-text">6、基于模糊的聚类（FCM模糊聚类）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2算法流程"><span class="nav-number">2.9.1.</span> <span class="nav-text">6.2算法流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3算法优缺点"><span class="nav-number">2.9.2.</span> <span class="nav-text">6.3算法优缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-4常见的算法及改进"><span class="nav-number">2.9.3.</span> <span class="nav-text">6.4常见的算法及改进</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、其他聚类"><span class="nav-number">2.10.</span> <span class="nav-text">7、其他聚类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1基于约束的方法"><span class="nav-number">2.10.1.</span> <span class="nav-text">7.1基于约束的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2量子聚类："><span class="nav-number">2.10.2.</span> <span class="nav-text">7.2量子聚类：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3核聚类"><span class="nav-number">2.10.3.</span> <span class="nav-text">7.3核聚类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4谱聚类"><span class="nav-number">2.10.4.</span> <span class="nav-text">7.4谱聚类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、方法扩展"><span class="nav-number">3.</span> <span class="nav-text">三、方法扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、数据简化方法"><span class="nav-number">3.1.</span> <span class="nav-text">1、数据简化方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、相似性衡量"><span class="nav-number">3.2.</span> <span class="nav-text">2、相似性衡量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、参考资料"><span class="nav-number">3.3.</span> <span class="nav-text">四、参考资料</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1322,6 +772,10 @@
 
 
   
+  <script type="text/javascript" src="/zhangyunfeng111.github.io/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/zhangyunfeng111.github.io/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
