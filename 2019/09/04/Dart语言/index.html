@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/zhangyunfeng111.github.io/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/zhangyunfeng111.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/zhangyunfeng111.github.io/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/zhangyunfeng111.github.io/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/zhangyunfeng111.github.io/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/zhangyunfeng111.github.io/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/zhangyunfeng111.github.io/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Dart、flutter、前端,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="基础篇基本类型var 可以定义变量，如 var tag = “666” ，这和 JS 、 Kotlin 等语言类似，同时 Dart 属于伪动态强类型语言，支持闭包。 Dart 中 number 类型分为 int 和 double ，其中 java 中的 long 对应的也是 Dart 中的 int 类型。Dart 中没有 float 类型。 Dart 下只有 bool 型可以用于 if 等判断，不">
+<meta name="keywords" content="Dart、flutter、前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dart与flutter基础">
+<meta property="og:url" content="http://yoursite.com/2019/09/04/Dart语言/index.html">
+<meta property="og:site_name" content="Record">
+<meta property="og:description" content="基础篇基本类型var 可以定义变量，如 var tag = “666” ，这和 JS 、 Kotlin 等语言类似，同时 Dart 属于伪动态强类型语言，支持闭包。 Dart 中 number 类型分为 int 和 double ，其中 java 中的 long 对应的也是 Dart 中的 int 类型。Dart 中没有 float 类型。 Dart 下只有 bool 型可以用于 if 等判断，不">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/09/04/Dart语言/images/dart_1.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/09/04/Dart语言/images/Dart_2.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/09/04/Dart语言/images/dart_3.jpg">
+<meta property="og:updated_time" content="2019-09-07T15:46:58.081Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Dart与flutter基础">
+<meta name="twitter:description" content="基础篇基本类型var 可以定义变量，如 var tag = “666” ，这和 JS 、 Kotlin 等语言类似，同时 Dart 属于伪动态强类型语言，支持闭包。 Dart 中 number 类型分为 int 和 double ，其中 java 中的 long 对应的也是 Dart 中的 int 类型。Dart 中没有 float 类型。 Dart 下只有 bool 型可以用于 if 等判断，不">
+<meta name="twitter:image" content="http://yoursite.com/2019/09/04/Dart语言/images/dart_1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/zhangyunfeng111.github.io/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/09/04/Dart语言/">
+
+
+
+
+
+  <title>Dart与flutter基础 | Record</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/zhangyunfeng111.github.io/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Record</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/zhangyunfeng111.github.io/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/zhangyunfeng111.github.io/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/zhangyunfeng111.github.io/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/zhangyunfeng111.github.io/2019/09/04/Dart语言/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="张云烽">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/zhangyunfeng111.github.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Record">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Dart与flutter基础</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-04T13:36:04+08:00">
+                2019-09-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/zhangyunfeng111.github.io/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="基础篇"><a href="#基础篇" class="headerlink" title="基础篇"></a>基础篇</h1><h2 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h2><p>var 可以定义变量，如 var tag = “666” ，这和 JS 、 Kotlin 等语言类似，同时 Dart 属于伪动态强类型语言，支持闭包。</p>
+<p>Dart 中 number 类型分为 int 和 double ，其中 java 中的 long 对应的也是 Dart 中的 int 类型。Dart 中没有 float 类型。</p>
+<p>Dart 下只有 bool 型可以用于 if 等判断，不同于 JS 这种使用方式是不合法的 var g = “null”; if(g){} 。</p>
+<p>DART中，switch 支持 String 类型。</p>
+<p>Dart 语言对以下类型有特殊的支持:</p>
+<ul>
+<li>numbers(数值)：int，double</li>
+<li>strings(字符串)</li>
+<li>booleans(布尔) lists(列表，也称为数组)</li>
+<li>maps(映射) </li>
+<li>runes(在字符串中表示一个Unicode字符) </li>
+<li>symbols</li>
+</ul>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>Dart 不需要给变量设置 setter getter 方法， 这和 kotlin 等类似。Dart 中所有的基础类型、类等都继承 Object ，默认值是 NULL， 自带 getter 和 setter ，而如果是 final 或者 const 的话，那么它只有一个 getter 方法。</p>
+<p>Dart 中 final 和 const 表示常量，比如 final name = ‘GSY’; const value= 1000000; 同时 static const 组合代表了静态常量。其中 const 的值在编译期确定，final 的值要到运行时才确定。（ps Flutter 在 Release 下是 AOT 模式。）</p>
+<p>Dart 下的数值，在作为字符串使用时，是需要显式指定的。比如：int i = 0; print(“aaaa” + i); 这样并不支持，需要 print(“aaaa” + i.toString()); 这样使用。这和 Java 与 JS 存在差异。所以在使用动态类型时，需要注意不要把 number 类型当做 String 使用。</p>
+<p>DART 中数组等于列表，所以 var list = []; 和 List list = new List() 可以简单看做一样。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>Dart 下 ?? 、??= 属于操作符，如: AA ?? “999” 表示如果 AA 为空，返回999；AA ??= “999” 表示如果 AA 为空，给 AA 设置成 999。<br> <br>Dart 方法可以设置 参数默认值 和 指定名称 。比如： getDetail(Sting userName, reposName, {branch = “master”}){} 方法，这里 branch 不设置的话，默认是 “master” 。参数类型 可以指定或者不指定。调用效果： getRepositoryDetailDao(“aaa”, “bbbb”, branch: “dev”);<br> <br>Dart 不像 Java ，没有关键词 public 、private 等修饰符，_下横向直接代表 private ，但是有 @protected 注解。</p>
+<p>Dart 中多构造函数，可以通过如下代码实现的。默认构造方法只能有一个，而通过Model.empty() 方法可以创建一个空参数的类，其实方法名称随你喜欢。而变量初始化值时，只需要通过 this.name 在构造方法中指定即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class ModelA &#123;</span><br><span class="line">    String name;</span><br><span class="line">    String tag;</span><br><span class="line">    </span><br><span class="line">    //默认构造方法，赋值给name和tag</span><br><span class="line">    ModelA(this.name, this.tag);</span><br><span class="line">    </span><br><span class="line">    //返回一个空的ModelA</span><br><span class="line">    ModelA.empty();</span><br><span class="line">  </span><br><span class="line">    //返回一个设置了name的ModelA</span><br><span class="line">    ModelA.forName(this.name);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Flutter"><a href="#Flutter" class="headerlink" title="Flutter"></a>Flutter</h2><h3 id="async-await"><a href="#async-await" class="headerlink" title="async/await"></a>async/await</h3><p>Flutter 中支持 async/await 。这一点和 ES7 很像，如下代码所示，只是定义的位置不同。同时异步操作也和 ES6 中的Promise 很像，只是 Flutter 中返回的是 Future 对象，通过 then 可以执行下一步。如果返回的还是 Future 便可以 then().then.() 的流式操作了 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">///模拟等待两秒，返回OK</span><br><span class="line">  request() async &#123;</span><br><span class="line">    await Future.delayed(Duration(seconds: 1));</span><br><span class="line">    return &quot;ok!&quot;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  ///得到&quot;ok!&quot;后，将&quot;ok!&quot;修改为&quot;ok from request&quot;</span><br><span class="line">  doSomeThing() async &#123;</span><br><span class="line">    String data = await request();</span><br><span class="line">    data = &quot;ok from request&quot;;</span><br><span class="line">    return data;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  ///打印结果</span><br><span class="line">  renderSome() &#123;</span><br><span class="line">    doSomeThing().then((value) &#123;</span><br><span class="line">      print(value);</span><br><span class="line">      ///输出ok from request</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>Flutter 中 setState  很有 React Native 的既视感，Flutter 中也是通过 state 跨帧实现管理数据状态的，这个后面会详细讲到。<br> <br>Flutter 中一切皆 Widget 呈现，通过 build方法返回 Widget，这也是和 React Native 中，通过 render 函数返回需要渲染的 component 一样的模式。</p>
+<h3 id="Flutter-Widget"><a href="#Flutter-Widget" class="headerlink" title="Flutter Widget"></a>Flutter Widget</h3><p>在 Flutter 中，一切的显示都是 Widget 。Widget 是一切的基础，作为响应式的渲染，属于 MVVM 的实现机制。我们可以通过修改数据，再用setState 设置数据，Flutter 会自动通过绑定的数据更新 Widget 。 所以你需要做的就是实现 Widget 界面，并且和数据绑定起来。<br> <br>Widget 分为 有状态 和 无状态 两种，在 Flutter 中每个页面都是一帧。无状态就是保持在那一帧。而有状态的 Widget 当数据更新时，其实是绘制了新的 Widget，只是 State 实现了跨帧的数据同步保存。</p>
+<blockquote>
+<p>这里有个小 Tip ，当代码框里输入 stl 的时候，可以自动弹出创建无状态控件的模板选项，而输入 stf 的时，就会弹出创建有状态 Widget 的模板选项。</p>
+<p>代码格式化的时候，括号内外的逗号都会影响格式化时换行的位置。</p>
+<p>如果觉得默认换行的线太短，可以在设置-Editor-Code Style-Dart-Wrapping and Braces-Hard wrap at 设置你接受的数值。</p>
+</blockquote>
+<h4 id="无状态StatelessWidget"><a href="#无状态StatelessWidget" class="headerlink" title="无状态StatelessWidget"></a>无状态StatelessWidget</h4><p>直接进入主题，下方代码是无状态 Widget 的简单实现。<br> <br>继承 StatelessWidget，通过 build 方法返回一个布局好的控件。可能现在你还对 Flutter 的内置控件不熟悉，but Don’t worry , take is easy ，后面我们就会详细介绍。这里你只需要知道，一个无状态的 Widget 就是这么简单。</p>
+<p>Widget 和 Widget 之间通过 child: 进行嵌套。其中有的 Widget 只能有一个 child，比如下方的 Container ；有的 Widget 可以多个 child ，也就是children:，比如` Column 布局。下方代码便是 Container Widget 嵌套了 Text Widget。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import &apos;package:flutter/material.dart&apos;;</span><br><span class="line"></span><br><span class="line">class DEMOWidget extends StatelessWidget &#123;</span><br><span class="line">  final String text;</span><br><span class="line"></span><br><span class="line">  //数据可以通过构造方法传递进来</span><br><span class="line">  DEMOWidget(this.text);</span><br><span class="line"></span><br><span class="line">  @override</span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    //这里返回你需要的控件</span><br><span class="line">    //这里末尾有没有的逗号，对于格式化代码而已是不一样的。</span><br><span class="line">    return Container(</span><br><span class="line">      //白色背景</span><br><span class="line">      color: Colors.white,</span><br><span class="line">      //Dart语法中，?? 表示如果text为空，就返回尾号后的内容。</span><br><span class="line">      child: Text(text ?? &quot;这就是无状态DMEO&quot;),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="有状态StatefulWidget"><a href="#有状态StatefulWidget" class="headerlink" title="有状态StatefulWidget"></a>有状态StatefulWidget</h4><p>继续直插主题，如下代码，是有状态的widget的简单实现。</p>
+<p>你需要创建管理的是主要是 State ， 通过 State 的 build 方法去构建控件。在 State 中，你可以动态改变数据，这类似 MVVM 实现，在 setState 之后，改变的数据会触发 Widget 重新构建刷新。而下方代码中，是通过延两秒之后，让文本显示为 “这就变了数值”。</p>
+<p>如下代码还可以看出，State 中主要的声明周期有 ：<br>1、initState ：初始化，理论上只有初始化一次，第二篇中会说特殊情况下。<br>2、didChangeDependencies：在 initState 之后调用，此时可以获取其他 State 。<br>3、dispose ：销毁，只会调用一次。</p>
+<p>看到没，Flutter 其实就是这么简单！你的关注点只要在：创建你的 StatelessWidget 或者 StatefulWidget 而已。你需要的就是在 build 中堆积你的布局，然后把数据添加到 Widget 中，最后通过 setState 改变数据，从而实现画面变化。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">import &apos;dart:async&apos;;</span><br><span class="line">import &apos;package:flutter/material.dart&apos;;</span><br><span class="line"></span><br><span class="line">class DemoStateWidget extends StatefulWidget &#123;</span><br><span class="line"></span><br><span class="line">  final String text;</span><br><span class="line"></span><br><span class="line">  ////通过构造方法传值</span><br><span class="line">  DemoStateWidget(this.text);</span><br><span class="line"></span><br><span class="line">  ///主要是负责创建state</span><br><span class="line">  @override</span><br><span class="line">  _DemoStateWidgetState createState() =&gt; _DemoStateWidgetState(text);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class _DemoStateWidgetState extends State&lt;DemoStateWidget&gt; &#123;</span><br><span class="line"></span><br><span class="line">  String text;</span><br><span class="line"></span><br><span class="line">  _DemoStateWidgetState(this.text);</span><br><span class="line">  </span><br><span class="line">  @override</span><br><span class="line">  void initState() &#123;</span><br><span class="line">    ///初始化，这个函数在生命周期中只调用一次</span><br><span class="line">    super.initState();</span><br><span class="line">    ///定时2秒</span><br><span class="line">    new Future.delayed(const Duration(seconds: 1), () &#123;</span><br><span class="line">      setState(() &#123;</span><br><span class="line">        text = &quot;这就变了数值&quot;;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  @override</span><br><span class="line">  void dispose() &#123;</span><br><span class="line">    ///销毁</span><br><span class="line">    super.dispose();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  @override</span><br><span class="line">  void didChangeDependencies() &#123;</span><br><span class="line">    ///在initState之后调 Called when a dependency of this [State] object changes.</span><br><span class="line">    super.didChangeDependencies();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  @override</span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    return Container(</span><br><span class="line">      child: Text(text ?? &quot;这就是有状态DMEO&quot;),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Flutter-布局"><a href="#Flutter-布局" class="headerlink" title="Flutter 布局"></a>Flutter 布局</h4><p>Flutter 中拥有需要将近30种内置的 布局Widget，其中常用有 Container、Padding、Center、Flex、Stack、Row、Column、ListView 等，下面简单讲解它们的特性和使用。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>作用特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Container</td>
+<td>只有一个子 Widget。默认充满，包含了padding、margin、color、宽高、decoration 等配置。</td>
+</tr>
+<tr>
+<td>Padding</td>
+<td>只有一个子 Widget。只用于设置Padding，常用于嵌套child，给child设置padding。</td>
+</tr>
+<tr>
+<td>Center</td>
+<td>只有一个子 Widget。只用于居中显示，常用于嵌套child，给child设置居中</td>
+</tr>
+<tr>
+<td>Stack<span class="Apple-tab-span" style="white-space:pre"></span></td>
+<td>可以有多个子 Widget。 子Widget堆叠在一起。</td>
+</tr>
+<tr>
+<td>Column</td>
+<td>可以有多个子 Widget。垂直布局。</td>
+</tr>
+<tr>
+<td>Row<span class="Apple-tab-span" style="white-space:pre"></span></td>
+<td>可以有多个子 Widget。水平布局。</td>
+</tr>
+<tr>
+<td>Expanded</td>
+<td>只有一个子 Widget。在 Column 和 Row 中充满。</td>
+</tr>
+<tr>
+<td>ListView</td>
+<td>可以有多个子 Widget。自己意会吧。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>Container ：最常用的默认布局！只能包含一个child:，支持配置 padding,margin,color,宽高,decoration（一般配置边框和阴影）等配置，在 Flutter 中，不是所有的控件都有 宽高、padding、margin、color 等属性，所以才会有 Padding、Center 等 Widget 的存在。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">new Container(</span><br><span class="line">        ///四周10大小的maring</span><br><span class="line">        margin: EdgeInsets.all(10.0),</span><br><span class="line">        height: 120.0,</span><br><span class="line">        width: 500.0,</span><br><span class="line">        ///透明黑色遮罩</span><br><span class="line">        decoration: new BoxDecoration(</span><br><span class="line">            ///弧度为4.0</span><br><span class="line">            borderRadius: BorderRadius.all(Radius.circular(4.0)),</span><br><span class="line">            ///设置了decoration的color，就不能设置Container的color。</span><br><span class="line">            color: Colors.black,</span><br><span class="line">            ///边框</span><br><span class="line">            border: new Border.all(color: Color(GSYColors.subTextColor), width: 0.3)),</span><br><span class="line">        child:new Text(&quot;666666&quot;));</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Column、Row 绝对是必备布局， 横竖布局也是日常中最常见的场景。如下方所示，它们常用的有这些属性配置：主轴方向是 start 或 center 等；副轴方向方向是 start 或 center 等；mainAxisSize 是充满最大尺寸，或者只根据子 Widget 显示最小尺寸。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//主轴方向，Column的竖向、Row我的横向</span><br><span class="line">mainAxisAlignment: MainAxisAlignment.start, </span><br><span class="line">//默认是最大充满、还是根据child显示最小大小</span><br><span class="line">mainAxisSize: MainAxisSize.max,</span><br><span class="line">//副轴方向，Column的横向、Row我的竖向</span><br><span class="line">crossAxisAlignment :CrossAxisAlignment.center,</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Expanded 在 Column 和 Row 中代表着平均充满，当有两个存在的时候默认均分充满。同时页可以设置 flex 属性决定比例。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">new Column(</span><br><span class="line"> ///主轴居中,即是竖直向居中</span><br><span class="line"> mainAxisAlignment: MainAxisAlignment.center,</span><br><span class="line"> ///大小按照最小显示</span><br><span class="line"> mainAxisSize : MainAxisSize.min,</span><br><span class="line"> ///横向也居中</span><br><span class="line">  crossAxisAlignment : CrossAxisAlignment.center,</span><br><span class="line">  children: &lt;Widget&gt;[</span><br><span class="line">    ///flex默认为1</span><br><span class="line">    new Expanded(child: new Text(&quot;1111&quot;), flex: 2,),</span><br><span class="line">    new Expanded(child: new Text(&quot;2222&quot;)),</span><br><span class="line">  ],</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>接下来我们来写一个复杂一些的控件。首先我们创建一个私有方法_getBottomItem，返回一个 Expanded Widget，因为后面我们需要将这个方法返回的 Widget 在 Row 下平均充满。</p>
+<p>如代码中注释，布局内主要是现实一个居中的Icon图标和文本，中间间隔5.0的 padding：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">///返回一个居中带图标和文本的Item</span><br><span class="line">_getBottomItem(IconData icon, String text) &#123;</span><br><span class="line">  ///充满 Row 横向的布局</span><br><span class="line">  return new Expanded(</span><br><span class="line">    flex: 1,</span><br><span class="line">    ///居中显示</span><br><span class="line">    child: new Center(</span><br><span class="line">      ///横向布局</span><br><span class="line">      child: new Row(</span><br><span class="line">        ///主轴居中,即是横向居中</span><br><span class="line">        mainAxisAlignment: MainAxisAlignment.center,</span><br><span class="line">        ///大小按照最大充满</span><br><span class="line">        mainAxisSize : MainAxisSize.max,</span><br><span class="line">        ///竖向也居中</span><br><span class="line">        crossAxisAlignment : CrossAxisAlignment.center,</span><br><span class="line">        children: &lt;Widget&gt;[</span><br><span class="line">          ///一个图标，大小16.0，灰色</span><br><span class="line">          new Icon(</span><br><span class="line">            icon,</span><br><span class="line">            size: 16.0,</span><br><span class="line">            color: Colors.grey,</span><br><span class="line">          ),</span><br><span class="line">          ///间隔</span><br><span class="line">          new Padding(padding: new EdgeInsets.only(left:5.0)),</span><br><span class="line">          ///显示文本</span><br><span class="line">          new Text(</span><br><span class="line">            text,</span><br><span class="line">            //设置字体样式：颜色灰色，字体大小14.0</span><br><span class="line">            style: new TextStyle(color: Colors.grey, fontSize: 14.0),</span><br><span class="line">            //超过的省略为...显示</span><br><span class="line">            overflow: TextOverflow.ellipsis,</span><br><span class="line">            //最长一行</span><br><span class="line">            maxLines: 1,</span><br><span class="line">          ),</span><br><span class="line">        ],</span><br><span class="line">      ),</span><br><span class="line">    ),</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="images/dart_1.jpg" alt="dart_1"></p>
+<p>接着我们把上方的方法，放到新的布局里。如下流程和代码：</p>
+<ul>
+<li>首先是 Container包含了Card，用于快速简单的实现圆角和阴影。</li>
+<li>然后接下来包含了FlatButton实现了点击，通过Padding实现了边距。</li>
+<li>接着通过Column垂直包含了两个子Widget，一个是Container、一个是Row。</li>
+<li>Row 内使用的就是_getBottomItem方法返回的 Widget ，效果如下图。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">@override</span><br><span class="line"> Widget build(BuildContext context) &#123;</span><br><span class="line">   return new Container(</span><br><span class="line">     ///卡片包装</span><br><span class="line">     child: new Card(</span><br><span class="line">          ///增加点击效果</span><br><span class="line">         child: new FlatButton(</span><br><span class="line">             onPressed: ()&#123;print(&quot;点击了哦&quot;);&#125;,</span><br><span class="line">             child: new Padding(</span><br><span class="line">               padding: new EdgeInsets.only(left: 0.0, top: 10.0, right: 10.0, bottom: 10.0),</span><br><span class="line">               child: new Column(</span><br><span class="line">                 mainAxisSize: MainAxisSize.min,</span><br><span class="line">                 children: &lt;Widget&gt;[</span><br><span class="line">                   ///文本描述</span><br><span class="line">                   new Container(</span><br><span class="line">                       child: new Text(</span><br><span class="line">                         &quot;这是一点描述&quot;,</span><br><span class="line">                         style: TextStyle(</span><br><span class="line">                           color: Color(GSYColors.subTextColor),</span><br><span class="line">                           fontSize: 14.0,</span><br><span class="line">                         ),</span><br><span class="line">                         ///最长三行，超过 ... 显示</span><br><span class="line">                         maxLines: 3,</span><br><span class="line">                         overflow: TextOverflow.ellipsis,</span><br><span class="line">                       ),</span><br><span class="line">                       margin: new EdgeInsets.only(top: 6.0, bottom: 2.0),</span><br><span class="line">                       alignment: Alignment.topLeft),</span><br><span class="line">                   new Padding(padding: EdgeInsets.all(10.0)),</span><br><span class="line"></span><br><span class="line">                   ///三个平均分配的横向图标文字</span><br><span class="line">                   new Row(</span><br><span class="line">                     crossAxisAlignment: CrossAxisAlignment.start,</span><br><span class="line">                     children: &lt;Widget&gt;[</span><br><span class="line">                       _getBottomItem(Icons.star, &quot;1000&quot;),</span><br><span class="line">                       _getBottomItem(Icons.link, &quot;1000&quot;),</span><br><span class="line">                       _getBottomItem(Icons.subject, &quot;1000&quot;),</span><br><span class="line">                     ],</span><br><span class="line">                   ),</span><br><span class="line">                 ],</span><br><span class="line">               ),</span><br><span class="line">             ))),</span><br><span class="line">   );</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="images/Dart_2.jpg" alt="Dart_2"></p>
+<p>Flutter 中，你的布局很多时候就是这么一层一层嵌套出来的，当然还有其他更高级的布局方式，这里就先不展开了。</p>
+<h4 id="Flutter-页面"><a href="#Flutter-页面" class="headerlink" title="Flutter 页面"></a>Flutter 页面</h4><p>Flutter 中除了布局的 Widget，还有交互显示的 Widget 和完整页面呈现的Widget。其中常见的有 MaterialApp、Scaffold、Appbar、Text、Image、FlatButton等。下面简单介绍这些 Wdiget，并完成一个页面。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>作用特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MaterialApp</td>
+<td>一般作为APP顶层的主页入口，可配置主题，多语言，路由等。</td>
+</tr>
+<tr>
+<td>Scaffold</td>
+<td>一般用户页面的承载Widget，包含appbar、snackbar、drawer等material design的设定。</td>
+</tr>
+<tr>
+<td>Appbar</td>
+<td>一般用于Scaffold的appbar ，内有标题，二级页面返回按键等，当然不止这些，tabbar等也会需要它 。</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>显示文本，几乎都会用到，主要是通过style设置TextStyle来设置字体样式等。</td>
+</tr>
+<tr>
+<td>RichText</td>
+<td>富文本，通过设置TextSpan，可以拼接出富文本场景。</td>
+</tr>
+<tr>
+<td>TextField</td>
+<td>文本输入框 ：new TextField(controller: //文本控制器, obscureText: “hint文本”);</td>
+</tr>
+<tr>
+<td>Image</td>
+<td>Image</td>
+</tr>
+<tr>
+<td>FlatButton</td>
+<td>按键点击: new FlatButton(onPressed: () {},child: new Container());</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>那么再次直插主题实现一个简单完整的页面试试。如下方代码：</p>
+<ul>
+<li>首先我们创建一个StatefulWidget：DemoPage。</li>
+<li>然后在 _DemoPageState中，通过build创建了一个Scaffold。</li>
+<li>Scaffold内包含了一个AppBar和一个ListView。</li>
+<li>AppBar类似标题了区域，其中设置了 title为 Text Widget。</li>
+<li>body是ListView,返回了20个之前我们创建过的 DemoItem Widget。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line"></span><br><span class="line">void main() &#123;</span><br><span class="line">  runApp(new DemoApp());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class DemoApp extends StatelessWidget &#123;</span><br><span class="line">  DemoApp() : super(key: key);</span><br><span class="line"></span><br><span class="line">  @override</span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    return new MaterialApp(home: DemoPage());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="images/dart_3.jpg" alt="dart_3"></p>
+<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="https://juejin.im/post/5b631d326fb9a04fce524db2" target="_blank" rel="noopener">Flutter完整开发实战详解(一、Dart语言和Flutter基础) | 掘金技术征文</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/zhangyunfeng111.github.io/tags/Dart、flutter、前端/" rel="tag"># Dart、flutter、前端</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/zhangyunfeng111.github.io/2019/09/01/聚类算法概述/" rel="next" title="聚类算法">
+                <i class="fa fa-chevron-left"></i> 聚类算法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">张云烽</p>
+              <p class="site-description motion-element" itemprop="description">Let the past rest</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/zhangyunfeng111.github.io/archives">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/zhangyunfeng111.github.io/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/zhangyunfeng111.github.io/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基础篇"><span class="nav-number">1.</span> <span class="nav-text">基础篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本类型"><span class="nav-number">1.1.</span> <span class="nav-text">基本类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">1.2.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-number">1.3.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Flutter"><span class="nav-number">1.4.</span> <span class="nav-text">Flutter</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#async-await"><span class="nav-number">1.4.1.</span> <span class="nav-text">async/await</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Flutter-Widget"><span class="nav-number">1.4.2.</span> <span class="nav-text">Flutter Widget</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#无状态StatelessWidget"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">无状态StatelessWidget</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有状态StatefulWidget"><span class="nav-number">1.4.2.2.</span> <span class="nav-text">有状态StatefulWidget</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Flutter-布局"><span class="nav-number">1.4.2.3.</span> <span class="nav-text">Flutter 布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Flutter-页面"><span class="nav-number">1.4.2.4.</span> <span class="nav-text">Flutter 页面</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考："><span class="nav-number">1.4.3.</span> <span class="nav-text">参考：</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">张云烽</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/zhangyunfeng111.github.io/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/zhangyunfeng111.github.io/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/zhangyunfeng111.github.io/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/zhangyunfeng111.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/zhangyunfeng111.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/zhangyunfeng111.github.io/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/zhangyunfeng111.github.io/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/zhangyunfeng111.github.io/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/zhangyunfeng111.github.io/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/zhangyunfeng111.github.io/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/zhangyunfeng111.github.io/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/zhangyunfeng111.github.io/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/zhangyunfeng111.github.io/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/zhangyunfeng111.github.io/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
